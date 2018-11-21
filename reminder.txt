@@ -1,0 +1,21 @@
+=> the problem was that the information inside of socket.on('join',(params,callback)...) gets lost once callback is completed
+=>things like user and rooms name are not persistit anywhere and we need them for other event listeners
+=> but we have access to soket id
+=>we will make array of users where we can store this informations
+------------------------------------------------------------------------------------------------------------------------------------------------
+CLASSES
+------------------------------------------------------------------------------------------------------------------------------------------------
+=>first we will make new file: users.js
+=>we will use es6 class syntax  => class Class_name{}
+=>we can make instance of class => var instance=new Class_name();
+=>we dont need to declare attributes we can simply define them in constructor
+=>constructor syntax: constructor(){} --it is automaticly called
+=>this refer to the instance
+=>we define methods => method_name() {}
+ATTENTION:We dont put ; after definition of class. In class we dont use comas to differ functions!
+
+
+ATTENTION: map function:   is called by every element of array and we can return only attributes which we want
+---for example: var namesArray=users.map((user)=>{    return user.name;  }); //we get array of user names
+
+ATTENTION: when we want to expect that something is not defined we can do it like:   expect(user).toNotExist();
